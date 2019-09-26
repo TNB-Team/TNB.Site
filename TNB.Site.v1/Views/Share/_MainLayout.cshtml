@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/Assets/CSS/style.css">
+    <link rel="stylesheet" href="~/Assets/Node_Modules/glide/dist/css/glide.core.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Assets/CSS/hamburger-style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!-- display flex Wrapper-->
+    <header class="landing-header" id="main-header" dir="rtl">
+
+        <div id="logo">
+            <a href="index.html">
+                <img src="~/Files/Pictures/Site/tnb-logo.svg" alt="" id="logo-img">
+            </a>
+        </div>
+
+        <ul class="header-links">
+            <li><a href="">خانه</a></li>
+            <li><a href="">مسابقه</a></li>
+            <li><a href="">جزوات</a></li>
+            <li><a href="signup.html">درباره ما</a></li>
+            <li><a href="contactus.html">تماس با ما</a></li>
+        </ul>
+
+        <div class="lang"></div>
+
+        <div class="menu-buttons">
+            <a href="signup.html"><button class="btn-6" id="signup">ثبت نام<span></span></button></a>
+            <a href=""> <button class="btn-6" id="login">ورود<span></span></button></a>
+
+
+        </div>
+
+        <div class="ham-section">
+            <h1>hello</h1>
+        </div>
+
+
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div id="footer-logo">
+            <img id="footer-logo-image" src="~/Files/Pictures/Site/tnb-white.svg" alt="">
+        </div>
+        <div class="over footer-row">
+
+
+            <div class="footer-product footer-column">
+                <ul>
+
+                    <li>
+                        <a href=""><h3>تماس با ما</h3></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>آموزش</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>مسابقات</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>نرم افزار</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>شبکه</p></a>
+                    </li>
+
+
+                </ul>
+
+
+
+            </div>
+
+            <div class="footer-competition footer-column">
+                <ul>
+
+                    <li>
+                        <a href=""><h3>تماس با ما</h3></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>آموزش</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>مسابقات</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>نرم افزار</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>شبکه</p></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-pamphlet footer-column">
+                <ul>
+
+                    <li>
+                        <a href=""><h3>تماس با ما</h3></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>آموزش</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>مسابقات</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>نرم افزار</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>شبکه</p></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-about footer-column">
+                <ul>
+
+                    <li>
+                        <a href=""><h3>تماس با ما</h3></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>آموزش</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>مسابقات</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>نرم افزار</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>شبکه</p></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-contactus footer-column">
+                <ul>
+
+                    <li>
+                        <a href=""><h3>تماس با ما</h3></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>آموزش</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>مسابقات</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>نرم افزار</p></a>
+                    </li>
+
+                    <li>
+                        <a href=""><p>شبکه</p></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="under">
+            <p>some text </p>
+        </div>
+    </footer>
+
+    <script src="~/Assets/JS/clock.js"></script>
+
+
+
+    <script src="~/Assets/JS/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="~/Assets/Node_Modules/glide/dist/glide.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.btn-6')
+                .on('mouseenter', function (e) {
+                    var parentOffset = $(this).offset(),
+                        relX = e.pageX - parentOffset.left,
+                        relY = e.pageY - parentOffset.top;
+                    $(this).find('span').css({ top: relY, left: relX })
+                })
+                .on('mouseout', function (e) {
+                    var parentOffset = $(this).offset(),
+                        relX = e.pageX - parentOffset.left,
+                        relY = e.pageY - parentOffset.top;
+                    $(this).find('span').css({ top: relY, left: relX })
+                });
+            $('[href=#]').click(function () { return false });
+        });
+    </script>
+
+    <!-- hamicon jquery -->
+    <script>
+
+        $('document').ready(function () {
+            var trigger = $('#hamburger'),
+                isClosed = true;
+
+            trigger.click(function () {
+                burgerTime();
+            });
+
+            function burgerTime() {
+                if (isClosed == true) {
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+
+        });
+    </script>
+    <script>
+
+        new Glide('.glide',
+            {
+                type: 'carousel',
+                autoplay: 12000,
+                hoverpause: false,
+                gap: 0
+            }).mount();
+
+        AOS.init();
+
+    </script>
+</body>
+</html>
