@@ -11,7 +11,16 @@ namespace TNB.Site.v1.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            return View();
+        }
 
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
+        public ActionResult AboutUs()
+        {
             return View();
         }
     }

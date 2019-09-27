@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Share/_MainFooterLayout.cshtml";
+    Html.RenderPartial("~/Views/Share/_MainHeaderPartial.cshtml");
+}
+
+<!--
+        start submit-success section
+    -->
+<div class="submit-success">
+    <div class="inside-submit">
+        <div class="close">
+            <span>X</span>
+        </div>
+        <p>درخواست شما ثبت شد!</p>
+    </div>
+</div>
+
+<!--
+    start contact-us section
+-->
+<div class="contact-us" dir="rtl">
+    <div class="link">
+        <div class="Phone">
+            <span><img src="~/Files/Pictures/Site/Icons/telephone.png" alt=""></span>
+            021-12345678 - 021-12345678
+        </div>
+        <div class="email">
+            <span><img src="~/Files/Pictures/Site/Icons/close-envelope.png" alt=""></span>
+            tnbclub@gmail.com
+        </div>
+        <div class="location">
+            <span><img src="~/Files/Pictures/Site/Icons/placeholder.png" alt=""></span>
+            تهران -بزرگراه شهید بابایی (غرب به شرق)- خروجی حکیمیه- خیابان شهید صدوقی- بلوار شهید عباسپور- دانشگاه آزاد اسلامی واحد تهران شمال
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.0373192985307!2d51.57117806375025!3d35.7498874817887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e1c5455555555%3A0xe8b523f91aa5e44!2sIslamic+Azad+University+Faculty+of+Engineering!5e0!3m2!1sen!2s!4v1564146481687!5m2!1sen!2s" frameborder="0" style="border:0" allowfullscreen class="google-map"></iframe>
+        </div>
+    </div>
+    <div class="Form">
+        <form id="my-form" class="form-info" method="POST">
+            <p>انتقادات و پیشنهادات خود را با ما در میان بگذارید</p>
+            <div class="full-name">
+                <input type="text" placeholder="نام" required>
+                <input required type="text" placeholder=" نام خانوادگی">
+            </div>
+            <input required type="email" placeholder="پست الکترونیک" class="mail">
+            <input required type="text" placeholder="موضوع" class="subject">
+            <textarea name="" id="" cols="20" rows="8" placeholder="توضیحات" class="description"></textarea>
+            <button type="submit" class="sabt">ارسال</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<script src="../js/jquery.js"></script>
+<script>
+
+    $(function(){
+        $('#my-form').submit(function(event) {
+            var requiredInput= $("#my-form input[required]");
+            for(var i =0 ; i<requiredInput.length;i++) {
+                if(($("#my-form input[required]")[i].value) == ""){
+                   event.preventDefault();
+                   return;
+                }
+            }
+            // $(".submit-success").slideDown();
+        });
+        $(".close").click(function(){
+            $(".submit-success").slideUp();
+        });
+    });
+
+
+
+</script>
