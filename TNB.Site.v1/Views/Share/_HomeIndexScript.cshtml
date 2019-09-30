@@ -1,0 +1,65 @@
+﻿<script src="~/Assets/JS/clock.js"></script>
+
+
+
+<script src="~/Assets/JS/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="~/Assets/Node_Modules/glide/dist/glide.min.js"></script>
+
+<script>
+      $(function() {
+      $('.btn-6')
+        .on('mouseenter', function(e) {
+                var parentOffset = $(this).offset(),
+                  relX = e.pageX - parentOffset.left,
+                  relY = e.pageY - parentOffset.top;
+                $(this).find('span').css({top:relY, left:relX})
+        })
+        .on('mouseout', function(e) {
+                var parentOffset = $(this).offset(),
+                  relX = e.pageX - parentOffset.left,
+                  relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+        });
+      $('[href=#]').click(function(){return false});
+    });
+</script>
+
+<!-- hamicon jquery -->
+<script>
+
+$('document').ready(function () {
+    var trigger = $('#hamburger'),
+        isClosed = true;
+
+    trigger.click(function () {
+      burgerTime();
+    });
+
+    function burgerTime() {
+      if (isClosed == true) {
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+
+  });
+</script>
+<script>
+
+    new Glide('.glide',
+    {
+        type: 'carousel',
+        autoplay: 12000,
+        hoverpause : false,
+        gap:0
+    }).mount();
+
+    AOS.init();
+
+</script>
